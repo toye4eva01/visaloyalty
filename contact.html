@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <link rel="stylesheet" type="text/css" href="css/washington.css">
+  <script src="js/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/logoStandford32.ico">
+  <link rel="apple-touch-icon" href="images/logoStandford32.ico">
+
+  <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content" id="main-stack" data-scroll="0">
+      <div class="w-nav navbar" data-collapse="all" data-animation="over-left" data-duration="400" data-contain="1" data-easing="ease-out-quint" data-no-scroll="1">
+        <div class="w-container">
+          <div class="wrapper-mask" data-ix="menu-mask"></div>
+          <div class="navbar-title">Contact Us</div>
+          <a class="w-inline-block navbar-button" href="main.html" data-load="1">
+            <div class="navbar-button-icon icon ion-ios-close-empty"></div>
+          </a>
+        </div>
+      </div>
+      <div class="body padding">
+        <div class="logo-login"></div>
+      <!--  <div class="bottom-section padding">-->
+          <div class="w-form">
+            <form id="submit-form" name="email-form" data-name="Email Form" data-redirect="settings.html" action="#">
+              <div>
+                <label class="label-form" for="full-name-field">FULL NAME</label>
+                <input class="w-input input-form" id="name" type="text" name="name" data-name="full-name" required>
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form" for="email-field">EMAIL</label>
+                <input class="w-input input-form" id="email" type="email" name="email" data-name="email" required>
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form">Message</label>
+                <input class="w-input input-form" id="message" type="textarea" rows="4" cols="20" name="message" data-name="message" required>
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <!--<label class="label-form" for="birthday-field">BIRTHDAY</label>
+                <input class="w-input input-form" id="birthday-field" type="text" name="birthday" data-name="birthday" required> -->
+              </div>
+              <div class="separator-button-input"></div>
+              <input class="w-button action-button" type="submit" value="Send Message" id="sendmsg" data-wait="Please wait...">
+              <div class="separator-button"></div><!--<a class="link-upper" href="login.html" data-load="1">ALREADY HAVE AN ACCOUNT? <strong class="b-link">SIGN IN</strong></a> -->
+            </form>
+            <div class="w-form-done">
+              <p>Thank you! Your submission has been received!</p>
+            </div>
+            <div class="w-form-fail">
+              <p>Oops! Something went wrong while submitting the form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+$(document).ready(function(e) {
+    
+$('#sendmsg').click (function() {
+		//	alert("work");
+var name = $( "#name").val();
+var email = $( "#email").val();
+var message = $( "#message").val();
+//alert(storeid);
+if (name ==""){
+	alert("Kindly enter your name");
+	$('#name').focus();
+	return false;
+}
+
+else if 	(email == ""){
+	alert("Kindly enter your email");
+	$('#email').focus();
+	return false;
+	
+}
+
+else if (message ==""){
+	$('#warn').text("Kindly enter your message");
+	$('#message').focus();
+	return false;
+}
+$.ajax({
+									type: "POST",
+									url: "http://rewardsboxnigeria.com/demodiscount/mobiv/send.php",
+									//data: $("#contact").serialize(),
+									data: {name:name, email:email, message:message},
+																		
+									success: function(msg){
+									if (msg.success == false) {
+									$("#warn").html("There was an error submitting the form. Please try again.");
+									} else {
+									alert(msg); 
+									$('#name').val("");
+									$('#email').val("");
+									$('#message').val("");
+										
+									}
+													
+									}
+									
+								});
+return false;
+});
+
+
+	
+	
+	
+	
+	
+});
+
+
+
+
+</script>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Loyalty App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <link rel="stylesheet" type="text/css" href="css/washington.css">
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/offline-theme-dark.css">
+  <script src="js/webfont.js"></script>
+   <script type="text/javascript" charset="utf-8" src="offline.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+  <script type="text/javascript" charset="utf-8" src="js/localnotification.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/materialize.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/materialize.min.js"></script>
+  
+
+  <script> 
+  
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+    var exitpage =confirm("Are you sure you want to quit?");
+    if (exitpage==true)
+  {
+ navigator.app.exitApp();
+}
+
+}
+</script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+  </script>
+ 
+ 
+
+  <script type="text/javascript" src="js/modernizr.js"></script>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script src="js/prefixfree.min.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/logoStandford32.ico">
+  <link rel="apple-touch-icon" href="images/logoStandford32.ico">
+  <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+   <link href="css/test.css" rel="stylesheet" type="text/css" />
+   
+<script>
+
+$(document).ready(function(){
+	
+	function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+                   
+            }
+
+    
+     document.addEventListener("offline", function(){ alert("You're offline") }, false);
+     //document.addEventListener("online", function(){ alert("You're online") }, false);
+        
+  	
+  
+//$('.loading-mask').removeClass('stop-loading');
+$('#show-display').load('http://premiumincentives.biz/mobi/visaloyalty/promo.php');
+//$('.loading-mask').addClass('stop-loading');
+
+
+
+$('#sett').click(function(){
+
+//alert("click");
+$('.loading-mask').removeClass('stop-loading');
+
+$('#show-display').load('test2.html');
+
+$('.loading-mask').addClass('stop-loading');
+
+  //$('.loading-mask').hide();
+
+//return false;
+})
+
+
+
+
+
+
+$('#faq1').click(function(){
+$('#show-display').load('faq.html');
+//	return false;
+
+});
+
+$('#cont').click(function(){
+$('#show-display').load('contact.html');
+
+//return false;
+});
+
+
+
+
+$('#2, #3, #1, #11, #16, #17, #4, #8').click(function(){
+	
+	//$('#show-s').on('click', '.w-inline-block', function() {
+		id = $(this).attr('id');
+		//alert(id);
+		
+		$.ajax({
+									type: "GET",
+									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
+									data: {id:id},
+																		
+									success: function(msg){
+									if (msg.success == false) {
+									$("#warn").html("There was an error submitting the form. Please try again.");
+									} else {
+									$('#show-display').html(msg);	
+										
+									}
+													
+									}
+									
+								});
+							
+		//return false;
+		
+		
+	});
+
+$('#show-display').on('change', '#dropdown', function() {
+	
+	var stateid = $('#stateid').val();
+	var hmercatid = $('#hmercatid').val();
+	var noform = "noform";
+	//alert(stateid);
+		
+	//alert("move");
+	$.ajax({
+									type: "GET",
+									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
+									data: {currentpage: 1, stateid:stateid, hmercatid:hmercatid, noform:noform},
+																		
+									success: function(msg){
+									if (msg.success == false) {
+									alert("There was an error loading the page. Please try again.");
+									} else {
+									$(".showinfo").html('<img src="/images/loading.gif" />').html(msg)
+									//$("#hmercatid").val(id);
+									//$("#hstoreid").val(storeid);
+								//	$("#hfromdate").val(fromdate);
+									//$("#htodate").val(todate);
+																	
+									}
+													
+									}
+									
+								});
+	return false;
+	
+});
+	
+
+
+$('#exit').click(function(){
+
+var exitpage =confirm("Are you sure you want to quit?");
+    if (exitpage==true)
+  {
+ navigator.app.exitApp();
+}
+
+//return false;
+
+});
+
+
+
+
+})
+
+//$('.dropdown-button').dropdown({
+//      inDuration: 300,
+//      outDuration: 225,
+//      constrain_width: true, // Does not change width of dropdown to that of the activator
+//      hover: true, // Activate on hover
+//      gutter: 0, // Spacing from edge
+ //     belowOrigin: false, // Displays dropdown below the button
+//      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+//    }
+//  );
+
+
+
+
+
+  </script>
+  <style>  
+
+
+.backgroundpg1 {
+	background-image:url(images/bg.jpg);
+	background-repeat:no-repeat;
+	background-position: bottom;
+	
+}
+
+
+</style>
+</head>
+<body onload="onLoad();">
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content backgroundpg1" id="main-stack">
+      <div class="w-nav navbar" data-collapse="all" data-animation="over-left" data-duration="400" data-contain="1" data-easing="ease-out-quint" data-no-scroll="1">
+        <div class="w-container">
+          <nav class="w-nav-menu nav-menu" role="navigation">
+            <div class="nav-menu-header">
+              <div class="logo"><img src="images/logo3.jpg" alt="logo" height="140"></div>
+             <!-- <div class="slogan">All you need is here.</div>
+              <div><img src="images/menu banner.jpg" alt="Menu"></div> -->
+             <div class="logo"> <br/> </div>
+              <div> <br/> </div>
+              <br/>
+            </div>
+            <a class="w-clearfix w-inline-block nav-menu-link" href="main.html" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-home-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Home</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="3" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-star-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Hospitality</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="2" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-body-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Beauty & Spa</div>
+            </a>
+              <a class="w-clearfix w-inline-block nav-menu-link" id="4" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-wineglass-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Bars & Lounges</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="16" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-cart-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Retail</div>
+             <!-- <div class="nav-menu-text-right">8</div>-->
+            </a>
+              <a class="w-clearfix w-inline-block nav-menu-link" id="8" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-model-s"></div>
+              </div>
+              <div class="nav-menu-titles">Transport</div>
+             <!-- <div class="nav-menu-text-right">8</div>-->
+            </a>
+              <a class="w-clearfix w-inline-block nav-menu-link" id="1" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-scissors"></div>
+              </div>
+              <div class="nav-menu-titles">Fashion</div>
+             <!-- <div class="nav-menu-text-right">8</div>-->
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="11" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-medkit-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Health Care</div>
+            <!--  <div class="nav-menu-text-right">14</div> -->
+            </a>
+           <a class="w-clearfix w-inline-block nav-menu-link" id="17" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-circle-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Others</div>
+              <!--<div class="nav-menu-text-right spanred" id="noteno">8</div> -->
+            </a> 
+            <a class="w-clearfix w-inline-block nav-menu-link" id="faq1" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-albums-outline"></div>
+              </div>
+              <div class="nav-menu-titles">FAQ</div>
+             <!-- <div class="nav-menu-text-right">8</div>-->
+            </a>
+
+       <!--    <a class="w-clearfix w-inline-block nav-menu-link" id="wpp" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-world-outline"></div>
+              </div>
+              <div class="nav-menu-titles">WPP Discounts</div>
+            </a>
+          <!--  <a class="w-clearfix w-inline-block nav-menu-link" id="cont" href="contact.html" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-telephone-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Contact Us</div>
+             <!-- <div class="nav-menu-text-right">12</div>-->
+          <!--  </a>-->
+          <!--  <a class="w-clearfix w-inline-block nav-menu-link" href="news.html" data-load="1">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-paper-outline"></div>
+              </div>
+              <div class="nav-menu-titles">News List</div>
+              <div class="nav-menu-text-right">14</div>
+            </a> -->
+             <div class="separator-bottom"></div>
+             <div class="separator-bottom"></div>
+             <div class="separator-bottom"></div>
+             <div class="separator-bottom"></div>
+
+           
+              <a class="w-clearfix w-inline-block nav-menu-link" id="exit" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-close-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Exit</div>
+            </a>
+            <!--<a class="w-clearfix w-inline-block nav-menu-link" href="elements.html" data-load="1">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-box-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Elements</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link" id="sett" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-gear-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Settings</div>
+            </a>
+            <a class="w-clearfix w-inline-block nav-menu-link last" id ="ter" href="#" data-load="1">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-bookmarks-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Terms and Conditions</div>
+            </a>-->
+            <div class="separator-bottom"></div>
+            <div class="separator-bottom"></div>
+            <div class="separator-bottom"></div>
+          </nav>
+         <div class="wrapper-mask" data-ix="menu-mask"></div>
+
+          <div class="navbar-title"><img src="images/logo.jpg" alt="Visa" width="120" height="39"></div>
+          <div class="w-nav-button navbar-button left" id="menu-button" data-ix="hide-navbar-icons">
+            <div class="navbar-button-icon home-icon">
+              <div class="bar-home-icon"></div>
+              <div class="bar-home-icon"></div>
+              <div class="bar-home-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+             
+              
+              
+      <div class="body padding" id="show-display" >
+
+      </div>
+    </div>
+    <div class="page-content loading-mask" id="new-stack">
+      <div class="loading-icon">
+        <div class="navbar-button-icon icon ion-load-d"></div>
+      </div>
+    </div>
+    <div class="shadow-layer"></div>
+</section>
+ <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+<script type="text/javascript" src="js/framework.js"></script>
+  <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
