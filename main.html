@@ -60,7 +60,7 @@ function onBackKeyDown() {
 <script>
 
 $(document).ready(function(){
-	
+	$(".loader").fadeOut("slow");
 	function onLoad()
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
@@ -114,6 +114,7 @@ $('#show-display').load('contact.html');
 
 
 $('#2, #12, #1, #11, #16, #17, #4, #5').click(function(){
+	$(".loader").fadeOut("slow");
 	
 	//$('#show-s').on('click', '.w-inline-block', function() {
 		id = $(this).attr('id');
