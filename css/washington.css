@@ -1,5 +1,5 @@
 body {
-  background-color: #cccccc;
+  background-color: white;
   font-family: Montserrat, sans-serif;
   color: #333;
   font-size: 14px;
@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 h1 {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 10px;
   font-size: 38px;
   line-height: 44px;
