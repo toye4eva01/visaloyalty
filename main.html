@@ -75,7 +75,7 @@ $(document).ready(function(){
   	
   
 //$('.loading-mask').removeClass('stop-loading');
-$('#show-display').load('promo.php');
+$('#show-display').load('http://premiumincentives.biz/mobi/visaloyalty/promo.php');
 //$('.loading-mask').addClass('stop-loading');
 
 
@@ -130,7 +130,7 @@ $('#2, #3, #1, #11, #16, #17, #4, #8').click(function(){
 		$.ajax({
 							
 									type: "GET",
-									url: "merchantoffers.php",
+									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
 									data: {id:id},
 																		
 									success: function(msg){
@@ -163,7 +163,7 @@ $('#show-display').on('change', '#dropdown', function() {
 	//alert("move");
 	$.ajax({
 									type: "GET",
-									url: "merchantoffers.php",
+									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
 									data: {currentpage: 1, stateid:stateid, hmercatid:hmercatid, noform:noform},
 																		
 									success: function(msg){
