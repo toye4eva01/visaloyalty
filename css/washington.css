@@ -56,7 +56,7 @@ p {
 }
 a {
   width: 100%;
-  color: #F79510;
+  color: #787878;
   text-decoration: none;
 }
 .button {
@@ -72,7 +72,7 @@ a {
   z-index: 5;
   height: 60px;
   padding-top: 15px;
-  background-color: #2B3894; /* header background color*/
+  background-color: #CE000B; /* header background color*/
 }
 .mobile-wrapper {
   position: relative;
@@ -91,7 +91,7 @@ a {
   width: 45px;
   height: 45px;
   padding: 0px;
-  color: #2B3894;
+  color: #CE000B;
   line-height: 49px;
   text-align: center;
 }
@@ -141,7 +141,7 @@ a {
 }
 .body {
   padding-top: 40px;
- 
+  
 
 }
 .spanred {
@@ -150,7 +150,7 @@ a {
     left: 12px;
 	margin-top:10px;
 
-    background-color: #2B3894;
+    background-color: #CE000B;
     color: #fff;
     border-radius: 100%;
     padding: 1px 10px;
@@ -177,7 +177,7 @@ a {
   background-position: 50% 0px;
   background-size: cover;
   background-repeat: no-repeat;*/
-  border:solid #2B3894;
+  border:solid #CE000B;
 
 }
 .slide.bg2 {
@@ -216,7 +216,7 @@ a {
   background-color: #f7f7f7;
 }
 .list-item.highlighted {
-  border-left: 3px solid #2B3894;
+  border-left: 3px solid #CE000B;
 }
 .icon-list {
   display: inline-block;
@@ -229,7 +229,7 @@ a {
   text-align: center;
 }
 .icon-list.highlighted {
-  color: #2B3894;
+  color: #CE000B;
 }
 .title-list {
   display: inline-block;
@@ -250,20 +250,20 @@ a {
 .nav-menu-header {
   height: 145px; /*image height*/
   padding-top: 0px; /*top space*/
-  border-bottom: solid 2px #2B3894;  /*bottom border for header in menu*/
+  border-bottom: solid 2px #CE000B;  /*bottom border for header in menu*/
 }
 .nav-menu-link {
   display: block;
   height: 50px;
   padding: 0px;
-  border-bottom: 0px solid #2B3894; /* bottom border for side menu*/
+  border-bottom: 0px solid #CE000B; /* bottom border for side menu*/
   font-size: 13px;
   text-decoration: none;
   padding-right: 22px;
   padding-left: 22px;
 }
 .nav-menu-link:active {
-  color: #2B3894;
+  color: #CE000B;
 }
 .nav-menu-link.last {
   border-bottom-style: none;
@@ -280,7 +280,7 @@ a {
   width: 45px;
   height: 50px;
   float: left;
-  color: #2B3894;
+  color: #CE000B;
   font-size: 25px;
   line-height: 48px;
   text-align: left;
@@ -381,7 +381,7 @@ a {
   font-weight: 700;
 }
 .b-link:active {
-  color: #2B3894;
+  color: #CE000B;
 }
 .action-button {
   display: inline-block;
@@ -389,7 +389,7 @@ a {
   height: 51px;
   padding: 12px;
   border-radius: 2px;
-  background-color: #2B3894;
+  background-color: #CE000B;
   color: white;
   font-size: 12px;
   line-height: 26px;
@@ -433,7 +433,7 @@ a {
   font-size: 12px;
 }
 .input-form:focus {
-  border-bottom-color: #2B3894;
+  border-bottom-color: #CE000B;
 }
 .input-form.left {
   width: 100%;
@@ -524,8 +524,8 @@ a {
   border-radius: 15px;
 }
 .radio-bullet-replacement.checked {
-  border-color: #2B3894;
-  background-color: #2B3894;
+  border-color: #CE000B;
+  background-color: #CE000B;
 }
 .checkbox-field {
   position: relative;
@@ -555,7 +555,7 @@ a {
   transition: all 150ms ease-out;
 }
 .checkbox-handle.checked {
-  background-color: #2B3894;
+  background-color: #CE000B;
   -webkit-transform: translate(16px, 0px);
   -ms-transform: translate(16px, 0px);
   transform: translate(16px, 0px);
@@ -599,7 +599,7 @@ a {
 }
 .right-input-icon.color {
   margin-right: 0px;
-  color: #2B3894;
+  color: #CE000B;
   text-align: center;
 }
 .right-input-icon.search {
@@ -673,7 +673,7 @@ a {
   text-decoration: none;
 }
 .toolbar-top-button.w--current {
-  border-bottom-color: #2B3894;
+  border-bottom-color: #CE000B;
   background-color: white;
 }
 .tabs-content {
@@ -818,7 +818,7 @@ a {
   font-weight:700;
   
 }
-.news-container {
+. {
   position: relative;
  /* display: inline-block;*/
   margin-top: 50px;  /*margin from top of page */
@@ -865,7 +865,7 @@ a {
   margin-right: 12px;
   padding: 7px 16px;
   border-radius: 2px;
-  background-color: #2B3894;
+  background-color: #CE000B;
   color: white;
   font-size: 10px;
   text-decoration: none;
@@ -987,7 +987,7 @@ a {
   float: right;
   border-top-left-radius: 12px;
   border-top-right-radius: 0px;
-  background-color: #2B3894;
+  background-color: #CE000B;
   color: white;
 }
 .arrow-globe {
@@ -1003,7 +1003,7 @@ a {
   top: 0px;
   right: 9px;
   border-right: 0px none transparent;
-  border-left: 12px solid #2B3894;
+  border-left: 12px solid #CE000B;
 }
 .chat-time {
   display: block;
@@ -1045,14 +1045,14 @@ a {
   font-size: 11px;
 }
 .input-chat:focus {
-  border-bottom-color: #2B3894;
+  border-bottom-color: #CE000B;
 }
 .chat-button {
   width: 18%;
   padding: 9px 0px 9px 7px;
   float: right;
   background-color: transparent;
-  color: #2B3894;
+  color: #CE000B;
   font-size: 12px;
 }
 .slider-element-test {
@@ -1215,16 +1215,15 @@ background-size:cover;
 
 /* Style The Dropdown Button */
 .dropbtn {
-    background-color: #2B3894;
+    background-color: #CE000B;
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: #F79510 2px solid;
+    border: #787878 2px solid;
     cursor: pointer;
 	width:100%;
 	margin-bottom:10px;
 	text-align: center;
-	padding-top:10px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -1266,8 +1265,8 @@ background-size:cover;
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #F79510;
-	 border: #2B3894 2px solid;
+    background-color: #787878;
+	 border: #CE000B 2px solid;
 }
 
 .backgroundpg13 {
@@ -1303,22 +1302,11 @@ background-size:cover;
 	color:#000;
 	padding-left:20px;
 	padding-top:0px;
-	/*border-top: solid 2px #2B3894;*/
+	/*border-top: solid 2px #CE000B;*/
 	
 	
 	
 }
-
-.read2{
-	text-align:center;
-	font-size:12px;
-	color:#fff;
-	padding-left:20px;
-	padding-top:10px;
-	
-}
-
-
 .cat{
 	text-align:left;
 	font-size:8px;
@@ -1378,7 +1366,8 @@ background-size:cover;
 	margin-left:20px;
 	
 }
-
+	
+	
 .loader {
 	position: fixed;
 	left: 0px;
@@ -1387,4 +1376,14 @@ background-size:cover;
 	height: 100%;
 	z-index: 9999;
 	background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
-}	
+}
+
+.test{
+position:fixed;
+display:block;
+z-index:1;
+width:21.5%;
+/*margin-top:20px;	*/
+	
+	
+}

@@ -62,13 +62,7 @@ if ($count > 0){
 
 	//$result .="<br/>";
     $result .="<div class=\"news-container\">";	
-	//$result .="<div class=\"dropdown\">";
- //	$result .="<button class=\"dropbtn\">Choose City</button>";
-  //	$result .="<div class=\"dropdown-content\">";
-  //  $result .="<a href=\"#\">Lagos</a>";
-  //  $result .="<a href=\"#\">Abuja</a>";
-  //  $result .="<a href=\"#\">Portharcourt</a>";
-  //	$result .="</div>";
+
   
   if (!isset($_GET['noform'])) {
 	$result .="<input name=\"mercartid\" type=\"hidden\" value=\"$mercatid\" id=\"hmercatid\" />";

@@ -61,6 +61,7 @@ function onBackKeyDown() {
 
 $(document).ready(function(){
 	$(".loader").fadeOut("slow");
+	
 	function onLoad()
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
@@ -74,7 +75,7 @@ $(document).ready(function(){
   	
   
 //$('.loading-mask').removeClass('stop-loading');
-$('#show-display').load('http://premiumincentives.biz/mobi/visaloyalty/promo.php');
+$('#show-display').load('promo.php');
 //$('.loading-mask').addClass('stop-loading');
 
 
@@ -113,22 +114,30 @@ $('#show-display').load('contact.html');
 
 
 
-$('#2, #12, #1, #11, #16, #17, #4, #5').click(function(){
-	$(".loader").fadeOut("slow");
+$('#2, #3, #1, #11, #16, #17, #4, #8').click(function(){
+	
+	//$(window).load(function() {
+	
+//(".loader").fadeOut("slow");
+//	$('.loading-mask').removeClass('stop-loading');
+	
 	
 	//$('#show-s').on('click', '.w-inline-block', function() {
 		id = $(this).attr('id');
 		//alert(id);
+		//('#show-display').html('<img src="images/page-loader.gif"/>');
 		
 		$.ajax({
+							
 									type: "GET",
-									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
+									url: "merchantoffers.php",
 									data: {id:id},
 																		
 									success: function(msg){
 									if (msg.success == false) {
 									$("#warn").html("There was an error submitting the form. Please try again.");
 									} else {
+										
 									$('#show-display').html(msg);	
 										
 									}
@@ -138,9 +147,11 @@ $('#2, #12, #1, #11, #16, #17, #4, #5').click(function(){
 								});
 							
 		//return false;
-		
+		//$('#img').hide();
+		//$('.loading-mask').addClass('stop-loading');
 		
 	});
+	
 
 $('#show-display').on('change', '#dropdown', function() {
 	
@@ -152,7 +163,7 @@ $('#show-display').on('change', '#dropdown', function() {
 	//alert("move");
 	$.ajax({
 									type: "GET",
-									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
+									url: "merchantoffers.php",
 									data: {currentpage: 1, stateid:stateid, hmercatid:hmercatid, noform:noform},
 																		
 									success: function(msg){
@@ -216,7 +227,7 @@ var exitpage =confirm("Are you sure you want to quit?");
 	background-image:url(images/bg.jpg);
 	background-repeat:no-repeat;
 	background-position: bottom;
-	background-color:#ccc;
+		
 	
 }
 
@@ -226,7 +237,7 @@ var exitpage =confirm("Are you sure you want to quit?");
 <body onload="onLoad();">
   <section class="w-section mobile-wrapper">
 
-    <div class="page-content " id="main-stack">
+    <div class="page-content backgroundpg1"  id="main-stack">
       <div class="w-nav navbar" data-collapse="all" data-animation="over-left" data-duration="400" data-contain="1" data-easing="ease-out-quint" data-no-scroll="1">
         <div class="w-container">
           <nav class="w-nav-menu nav-menu" role="navigation">
@@ -244,23 +255,23 @@ var exitpage =confirm("Are you sure you want to quit?");
               </div>
               <div class="nav-menu-titles">Home</div>
             </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" id="12" href="#" data-easing="ease-in-quint">
+            <a class="w-clearfix w-inline-block nav-menu-link" id="3" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-star-outline"></div>
               </div>
-              <div class="nav-menu-titles">Lifestyle</div>
+              <div class="nav-menu-titles">Hospitality</div>
             </a>
             <a class="w-clearfix w-inline-block nav-menu-link" id="2" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-body-outline"></div>
               </div>
-              <div class="nav-menu-titles">Beauty, Gym & Spa</div>
+              <div class="nav-menu-titles">Beauty & Spa</div>
             </a>
               <a class="w-clearfix w-inline-block nav-menu-link" id="4" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-wineglass-outline"></div>
               </div>
-              <div class="nav-menu-titles">Restaurants & Bars</div>
+              <div class="nav-menu-titles">Bars & Lounges</div>
             </a>
             <a class="w-clearfix w-inline-block nav-menu-link" id="16" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
@@ -269,11 +280,11 @@ var exitpage =confirm("Are you sure you want to quit?");
               <div class="nav-menu-titles">Retail</div>
              <!-- <div class="nav-menu-text-right">8</div>-->
             </a>
-              <a class="w-clearfix w-inline-block nav-menu-link" id="5" href="#" data-easing="ease-in-quint">
+              <a class="w-clearfix w-inline-block nav-menu-link" id="8" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
-                <div class="icon ion-ios-monitor-outline"></div>
+                <div class="icon ion-model-s"></div>
               </div>
-              <div class="nav-menu-titles">Electronics & Gadgets</div>
+              <div class="nav-menu-titles">Transport</div>
              <!-- <div class="nav-menu-text-right">8</div>-->
             </a>
               <a class="w-clearfix w-inline-block nav-menu-link" id="1" href="#" data-easing="ease-in-quint">
@@ -361,7 +372,7 @@ var exitpage =confirm("Are you sure you want to quit?");
           </nav>
          <div class="wrapper-mask" data-ix="menu-mask"></div>
 
-          <div class="navbar-title"><img src="images/logo.jpg" alt="Visa" width="120" height="39"></div>
+          <div class="navbar-title"><img src="images/logo.png" alt="Zenith Insurance" width="120" height="39"></div>
           <div class="w-nav-button navbar-button left" id="menu-button" data-ix="hide-navbar-icons">
             <div class="navbar-button-icon home-icon">
               <div class="bar-home-icon"></div>
@@ -373,18 +384,19 @@ var exitpage =confirm("Are you sure you want to quit?");
       </div>
     
              
+           
               
-              
-      <div class="body padding" id="show-display" >
+      <div class="body padding " id="show-display" >
+        <img src="images/page-loader.gif" id="img" style="display:none"/ > 
+      <div class="loader"></div>
 
       </div>
-      <div class="page-content loading-mask" id="new-stack">
+    </div>
+    <div class="page-content loading-mask" id="new-stack">
       <div class="loading-icon">
         <div class="navbar-button-icon icon ion-load-d"></div>
       </div>
     </div>
-    </div>
-    
     <div class="shadow-layer"></div>
 </section>
  <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
