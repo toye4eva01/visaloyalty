@@ -75,7 +75,7 @@ $(document).ready(function(){
   	
   
 //$('.loading-mask').removeClass('stop-loading');
-$('#show-display').load('http://premiumincentives.biz/mobi/visaloyalty/promo.php');
+$('#show-display').load('merchant.html');
 //$('.loading-mask').addClass('stop-loading');
 
 
@@ -83,11 +83,11 @@ $('#show-display').load('http://premiumincentives.biz/mobi/visaloyalty/promo.php
 $('#sett').click(function(){
 
 //alert("click");
-$('.loading-mask').removeClass('stop-loading');
+//$('.loading-mask').removeClass('stop-loading');
 
 $('#show-display').load('test2.html');
 
-$('.loading-mask').addClass('stop-loading');
+//$('.loading-mask').addClass('stop-loading');
 
   //$('.loading-mask').hide();
 
@@ -114,7 +114,9 @@ $('#show-display').load('contact.html');
 
 
 
-$('#2, #3, #1, #11, #16, #17, #4, #8').click(function(){
+$('#2, #3, #1, #7, #4, #5, #6, #8').click(function(){
+	
+	
 	
 	//$(window).load(function() {
 	
@@ -126,11 +128,12 @@ $('#2, #3, #1, #11, #16, #17, #4, #8').click(function(){
 		id = $(this).attr('id');
 		//alert(id);
 		//('#show-display').html('<img src="images/page-loader.gif"/>');
+		alert(id);
 		
 		$.ajax({
 							
 									type: "GET",
-									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
+									url: "http://premiumincentives.biz/zenithinsurance/api/storeoffers.php",
 									data: {id:id},
 																		
 									success: function(msg){
@@ -163,7 +166,7 @@ $('#show-display').on('change', '#dropdown', function() {
 	//alert("move");
 	$.ajax({
 									type: "GET",
-									url: "http://premiumincentives.biz/mobi/visaloyalty/merchantoffers.php",
+									url: "http://premiumincentives.biz/zenithinsurance/api/storeoffers.php",
 									data: {currentpage: 1, stateid:stateid, hmercatid:hmercatid, noform:noform},
 																		
 									success: function(msg){
@@ -242,7 +245,7 @@ var exitpage =confirm("Are you sure you want to quit?");
         <div class="w-container">
           <nav class="w-nav-menu nav-menu" role="navigation">
             <div class="nav-menu-header">
-              <div class="logo"><img src="images/logo3.jpg" alt="logo" height="140"></div>
+              <div class="logo"><img src="images/logo3.jpg" alt="logo" height=""></div>
              <!-- <div class="slogan">All you need is here.</div>
               <div><img src="images/menu banner.jpg" alt="Menu"></div> -->
              <div class="logo"> <br/> </div>
@@ -255,7 +258,15 @@ var exitpage =confirm("Are you sure you want to quit?");
               </div>
               <div class="nav-menu-titles">Home</div>
             </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" id="3" href="#" data-easing="ease-in-quint">
+            
+            <a class="w-clearfix w-inline-block nav-menu-link" id="mercha" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-keypad-outline"></div>
+              </div>
+              <div class="nav-menu-titles">All Merchants</div>
+            </a>
+            
+            <a class="w-clearfix w-inline-block nav-menu-link" id="1" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-star-outline"></div>
               </div>
@@ -267,54 +278,62 @@ var exitpage =confirm("Are you sure you want to quit?");
               </div>
               <div class="nav-menu-titles">Beauty & Spa</div>
             </a>
-              <a class="w-clearfix w-inline-block nav-menu-link" id="4" href="#" data-easing="ease-in-quint">
+              <a class="w-clearfix w-inline-block nav-menu-link" id="3" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-wineglass-outline"></div>
               </div>
               <div class="nav-menu-titles">Bars & Lounges</div>
             </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" id="16" href="#" data-easing="ease-in-quint">
+            <a class="w-clearfix w-inline-block nav-menu-link" id="4" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-cart-outline"></div>
               </div>
               <div class="nav-menu-titles">Retail</div>
-             <!-- <div class="nav-menu-text-right">8</div>-->
+            
             </a>
-              <a class="w-clearfix w-inline-block nav-menu-link" id="8" href="#" data-easing="ease-in-quint">
+              <a class="w-clearfix w-inline-block nav-menu-link" id="5" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-model-s"></div>
               </div>
-              <div class="nav-menu-titles">Transport</div>
-             <!-- <div class="nav-menu-text-right">8</div>-->
+              <div class="nav-menu-titles">Autocare</div>
             </a>
-              <a class="w-clearfix w-inline-block nav-menu-link" id="1" href="#" data-easing="ease-in-quint">
+              <a class="w-clearfix w-inline-block nav-menu-link" id="6" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-scissors"></div>
               </div>
               <div class="nav-menu-titles">Fashion</div>
-             <!-- <div class="nav-menu-text-right">8</div>-->
+            
             </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" id="11" href="#" data-easing="ease-in-quint">
+            <a class="w-clearfix w-inline-block nav-menu-link" id="7" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-medkit-outline"></div>
               </div>
               <div class="nav-menu-titles">Health Care</div>
-            <!--  <div class="nav-menu-text-right">14</div> -->
+            
             </a>
-           <a class="w-clearfix w-inline-block nav-menu-link" id="17" href="#" data-easing="ease-in-quint">
+           <a class="w-clearfix w-inline-block nav-menu-link" id="8" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-circle-outline"></div>
               </div>
               <div class="nav-menu-titles">Others</div>
-              <!--<div class="nav-menu-text-right spanred" id="noteno">8</div> -->
+             
             </a> 
-            <a class="w-clearfix w-inline-block nav-menu-link" id="faq1" href="#" data-easing="ease-in-quint">
+                <a class="w-clearfix w-inline-block nav-menu-link" id="notifica" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
-                <div class="icon ion-ios-albums-outline"></div>
+                <div class="icon ion-ios-chatboxes-outline"></div>
               </div>
-              <div class="nav-menu-titles">FAQ</div>
-             <!-- <div class="nav-menu-text-right">8</div>-->
+              <div class="nav-menu-titles">Notifications</div>
+              <div class="nav-menu-text-right spanred" id="noteno">8</div>
             </a>
+           
+
+           <a class="w-clearfix w-inline-block nav-menu-link" id="wpp" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-world-outline"></div>
+              </div>
+              <div class="nav-menu-titles">WPP Discounts</div>
+            </a>
+            
 
        <!--    <a class="w-clearfix w-inline-block nav-menu-link" id="wpp" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
@@ -340,7 +359,22 @@ var exitpage =confirm("Are you sure you want to quit?");
              <div class="separator-bottom"></div>
              <div class="separator-bottom"></div>
              <div class="separator-bottom"></div>
-
+<a class="w-clearfix w-inline-block nav-menu-link" id="faq1" href="#" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-albums-outline"></div>
+              </div>
+              <div class="nav-menu-titles">FAQ</div>
+             <!-- <div class="nav-menu-text-right">8</div>-->
+            </a>
+            
+             <a class="w-clearfix w-inline-block nav-menu-link" id="cont" href="contact.html" data-easing="ease-in-quint">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-telephone-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Contact Us</div>
+             <!-- <div class="nav-menu-text-right">12</div>-->
+            </a>
+            
            
               <a class="w-clearfix w-inline-block nav-menu-link" id="exit" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">

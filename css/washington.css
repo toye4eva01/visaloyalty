@@ -1,3 +1,5 @@
+
+
 body {
   background-color: white;
   font-family: Montserrat, sans-serif;
@@ -27,8 +29,9 @@ h3 {
 h4 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 15px;
-  line-height: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 2px;
   font-weight: 400;
   padding:20px;
 }
@@ -37,11 +40,13 @@ h5 {
   margin-bottom: 5px;
   font-size: 14px;
   line-height: 20px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 h6 {
   margin-top: 0px;
   margin-bottom: 2px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 18px;
   font-weight: 200;
@@ -50,6 +55,7 @@ p {
   margin-bottom: 5px;
   padding-right: 20px;
   padding-left: 20px;
+  font-family: 'Montserrat', sans-serif;
   color: #bababa;
   font-size: 12px;
   line-height: 1.9em;
@@ -248,7 +254,7 @@ a {
   background-color: white;
 }
 .nav-menu-header {
-  height: 145px; /*image height*/
+  height: 65px; /*sidemenu image height*/
   padding-top: 0px; /*top space*/
   border-bottom: solid 2px #CE000B;  /*bottom border for header in menu*/
 }
@@ -1386,4 +1392,8 @@ width:21.5%;
 /*margin-top:20px;	*/
 	
 	
+}
+
+addtext{
+	margin:200px;
 }
