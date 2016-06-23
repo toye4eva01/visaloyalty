@@ -34,7 +34,11 @@ h4 {
   line-height: 2px;
   font-weight: 400;
   padding: 20px;
+  text-transform:capitalize !important;
+
 }
+
+
 h5 {
   margin-top: 10px;
   margin-bottom: 5px;
@@ -658,7 +662,7 @@ a {
 }
 .splash-logo {
   height: 305px;
-  background-image: url('../images/logoStandford4.png');
+  /*background-image: url('../images/logoStandford4.png');*/
   background-position: 50% 50%;
   background-size: 188px;
   background-repeat: no-repeat;
