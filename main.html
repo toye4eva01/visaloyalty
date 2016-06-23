@@ -80,12 +80,11 @@ $('#show-display').load('merchant.html');
 
 
 
-$('#sett').click(function(){
+$('#mercha').click(function(){
 
-//alert("click");
-//$('.loading-mask').removeClass('stop-loading');
+$('#show-display').html('<div class="loader"></div>');
 
-$('#show-display').load('test2.html');
+$('#show-display').load('http://premiumincentives.biz/zenithinsurance/api/storeoffers.php');
 
 //$('.loading-mask').addClass('stop-loading');
 
@@ -95,6 +94,10 @@ $('#show-display').load('test2.html');
 })
 
 
+$('#wpp').click (function() {
+	navigator.app.loadUrl('http://zenithinsurance.worldprivilegeplus.com/', { openExternal:true });
+			//window.open('http://zenithinsurance.worldprivilegeplus.com', '_system');
+		});
 
 
 
@@ -129,7 +132,7 @@ $('#2, #3, #1, #7, #4, #5, #6, #8').click(function(){
 		//alert(id);
 		//('#show-display').html('<img src="images/page-loader.gif"/>');
 		
-		
+		$('#show-display').html('<div class="loader"></div>');
 		$.ajax({
 							
 									type: "GET",
@@ -162,7 +165,7 @@ $('#show-display').on('change', '#dropdown', function() {
 	var hmercatid = $('#hmercatid').val();
 	var noform = "noform";
 	//alert(stateid);
-		
+		$('.showinfo').html('<div class="loader"></div>');
 	//alert("move");
 	$.ajax({
 									type: "GET",
@@ -173,7 +176,7 @@ $('#show-display').on('change', '#dropdown', function() {
 									if (msg.success == false) {
 									alert("There was an error loading the page. Please try again.");
 									} else {
-									$(".showinfo").html('<img src="/images/loading.gif" />').html(msg)
+									$(".showinfo").html(msg)
 									//$("#hmercatid").val(id);
 									//$("#hstoreid").val(storeid);
 								//	$("#hfromdate").val(fromdate);
@@ -318,13 +321,13 @@ var exitpage =confirm("Are you sure you want to quit?");
               <div class="nav-menu-titles">Others</div>
              
             </a> 
-                <a class="w-clearfix w-inline-block nav-menu-link" id="notifica" href="#" data-easing="ease-in-quint">
+             <!--   <a class="w-clearfix w-inline-block nav-menu-link" id="notifica" href="#" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-chatboxes-outline"></div>
               </div>
               <div class="nav-menu-titles">Notifications</div>
               <div class="nav-menu-text-right spanred" id="noteno">8</div>
-            </a>
+            </a> -->
            
 
            <a class="w-clearfix w-inline-block nav-menu-link" id="wpp" href="#" data-easing="ease-in-quint">
@@ -335,12 +338,7 @@ var exitpage =confirm("Are you sure you want to quit?");
             </a>
             
 
-       <!--    <a class="w-clearfix w-inline-block nav-menu-link" id="wpp" href="#" data-easing="ease-in-quint">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-world-outline"></div>
-              </div>
-              <div class="nav-menu-titles">WPP Discounts</div>
-            </a>
+   
           <!--  <a class="w-clearfix w-inline-block nav-menu-link" id="cont" href="contact.html" data-easing="ease-in-quint">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-telephone-outline"></div>
@@ -417,14 +415,10 @@ var exitpage =confirm("Are you sure you want to quit?");
         </div>
       </div>
     
-             
-           
-              
-      <div class="body padding " id="show-display" >
-        <img src="images/page-loader.gif" id="img" style="display:none"/ > 
-      <div class="loader"></div>
-
-      </div>
+      
+<div class="body padding " id="show-display" >
+  
+</div>
     </div>
     <div class="page-content loading-mask" id="new-stack">
       <div class="loading-icon">

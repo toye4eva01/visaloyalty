@@ -190,7 +190,7 @@
 	$('#showmerlist').on('click', '.w-inline-block', function() {
 		id = $(this).attr('id');
 		//alert(id);
-		
+		$('#show-display').html('<div class="loader"></div>');
 		$.ajax({
 									type: "GET",
 									url: "http://premiumincentives.biz/zenithinsurance/api/storeoffers.php",
