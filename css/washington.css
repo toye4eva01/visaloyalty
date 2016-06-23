@@ -342,7 +342,7 @@ a {
 }
 .logo-login {
   height: 211px;
-  background-image: url('../images/logo.png');
+  background-image: url('../images/login-logo.png');
   background-position: 50% 50%;
   background-size: 204px;
   background-repeat: no-repeat;
@@ -1388,7 +1388,8 @@ background-size:cover;
 	height: 100%;
 	z-index: 9999;
 	background: url('../images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
-	background-size: 5%;
+	background-size: 25%;
+	opacity:1;
 }
 
  
