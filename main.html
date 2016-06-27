@@ -162,7 +162,7 @@ $('#2, #3, #1, #7, #4, #5, #6, #8').click(function(){
 $('#show-display').on('change', '#dropdown', function() {
 	
 	var stateid = $('#stateid').val();
-	var hmercatid = $('#hmercatid').val();
+	var hmercatid = $('#id').val();
 	var noform = "noform";
 	//alert(stateid);
 		$('.showinfo').html('<div class="loader"></div>');
@@ -170,7 +170,7 @@ $('#show-display').on('change', '#dropdown', function() {
 	$.ajax({
 									type: "GET",
 									url: "http://premiumincentives.biz/zenithinsurance/api/storeoffers.php",
-									data: {currentpage: 1, stateid:stateid, hmercatid:hmercatid, noform:noform},
+									data: {currentpage: 1, stateid:stateid, id:id, noform:noform},
 																		
 									success: function(msg){
 									if (msg.success == false) {
